@@ -1,0 +1,217 @@
+*{
+    margin  : 0;
+    padding : 0;
+    -webkit-box-sizing : border-box;
+       -moz-box-sizing : border-box;
+        -ms-box-sizing : border-box;
+            box-sizing : border-box;
+    list-style      : none;
+    text-decoration : none;
+    outline         : none;
+    line-height     : 1.5;
+    font-family     : ui-sans-serif, system-ui;
+    font-size       : inherit;
+    font-weight     : inherit;
+    font-feature-settings   : normal;
+    font-variation-settings : normal;
+}
+.container{
+    width  : 100%;
+    margin : auto;
+}
+.grid{
+    display  : grid;
+    grid-gap : 10px;
+}
+.grid-3{
+    grid-template-columns: 1fr;
+}
+.button{
+    padding          : 10px 20px;
+    font-weight      : 500;
+    cursor           : pointer;
+    background-color : #7e22ce;
+    color            : #fff;
+    border-width     : 0;
+    border-radius    : 8px;
+    /* transition       : background-color .5s ease-in-out; */
+    transition-property        : background-color;
+    transition-duration        : 1s;
+    transition-timing-function : ease-in-out;
+    /*
+        linear       : Es una función de temporización que produce un cambio constante a lo largo del tiempo.
+        ease         : Comienza lenta, acelera en el medio y luego desacelera hacia el final de la transición.
+        ease-in      : Comienza lentamente y luego acelera hacia el final de la transición.
+        ease-out     : Inicia con una aceleración y luego se ralentiza hacia el final de la transición.
+        ease-in-out  : Comienza suavemente, acelera en el medio y luego se ralentiza hacia el final.
+        steps        : steps(4,start) -> Divide la transición en pasos discretos en lugar de proporcionar una animación continua.
+        cubic-bezier : cubic-bezier(0.25,0.1,0.25,1) -> Permite controlar la aceleración y desaceleración de la transición ajustando cuatro valores numéricos.
+    */
+}
+.button i{
+    width : 24px;
+}
+.button:hover{
+    background-color : #9333ea;
+}
+/* SIDENAV */
+.sidenav{
+    position         : fixed;
+    width            : 100%;
+    height           : 80px;
+    background-color : #5b21b6;
+}
+.sidenav img{
+    width : 80px;
+}
+.sidenav ul{
+    float : right;
+}
+.sidenav ul li{
+    display     : inline-block;
+    line-height : 80px;
+    margin      : 0 15px;
+}
+.sidenav ul li a{
+    position       : relative;
+    color          : white;
+    font-size      : 18px;
+    padding        : 5px 0;
+    text-transform : uppercase;
+}
+.sidenav ul li a::before{
+    position         : absolute;
+    content          : '';
+    left             : 0;
+    bottom           : 0;
+    height           : 3px;
+    width            : 100%;
+    background-color : white;
+    transform        : scaleX(0);
+    transform-origin : right;
+    transition       : transform .5s linear;
+}
+.sidenav ul li a:hover::before{
+    transform        : scaleX(1);
+    transform-origin : left;
+}
+#check{
+    display : none;
+}
+label #show, label #close{
+    color        : white;
+    font-size    : 30px;
+    float        : right;
+    line-height  : 80px;
+    margin-right : 40px;
+    cursor       : pointer;
+    display      : none;
+}
+/* CARD */
+.card{
+    width         : 100%;
+    border-style  : solid;
+    border-width  : 1px;
+    border-color  : #aaa;
+    border-radius : 16px;
+}
+.card-image{
+    width         : 100%;
+    height        : 250px;
+    object-fit    : cover;
+    border-radius : 16px 16px 0 0;
+}
+.card-body{
+    padding : 16px;
+}
+.card-body h2{
+    font-size     : 24px;
+    font-weight   : 500;
+    line-height   : 1;
+    margin-bottom : 12px;
+}
+.card-body p{
+    color          : #555;
+    line-height    : 1.3;
+    text-transform : capitalize;
+    margin-bottom  : 12px;
+}
+/* STACK */
+.stack{
+    text-align    : center;
+    padding       : 20px;
+    border-radius : 5px;
+    box-shadow    : 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.stack-icon{
+    font-size     : 52px;
+    color         : #7e22ce;
+    margin-bottom : 16px;
+}
+.stack h2{
+    font-size     : 24px;
+    font-weight   : 500;
+    line-height   : 1;
+    margin-bottom : 16px;
+}
+.stack p{
+    color          : #555;
+    line-height    : 1.3;
+    text-transform : capitalize;
+}
+/* MEDIA QUERY */
+@media (min-width:640px){   /* 93.75% */
+    .container{
+        max-width: 600px;
+    }
+}
+@media (max-width:768px){
+    /* SIDENAV */
+    label #show{
+        display : block;
+    }
+    .sidenav ul{
+        position: fixed;
+        width            : 100%;
+        height           : 100vh;
+        background-color : #7c3aed;
+        top              : 80px;
+        left             : -100%; /* left: 0; */
+        text-align       : center;
+        transition       : all .5s;
+    }
+    .sidenav ul li{
+        display : block;
+    }
+    #check:checked ~ ul{
+        left : 0;
+    }
+    #check:checked ~ label #show{
+        display : none;
+    }
+    #check:checked ~ label #close{
+        display : block;
+    }
+
+}
+@media (min-width:768px){   /* 93.75% */
+    .container{
+        max-width: 720px;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1024px){  /* 93.75% */
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width:1280px){  /* 93.75% */
+    .container{
+        max-width: 1200px;
+    }
+}
+@media (min-width:1536px){  /* 93.75% */
+    .container{
+        max-width: 1440px;
+    }
+}
