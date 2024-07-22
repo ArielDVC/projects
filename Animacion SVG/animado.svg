@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+	<style type="text/css">
+		*{
+			--colorC : #E74B94;
+			--colorE : #0684C7;
+		}
+		.st0{
+            fill   : none;
+            stroke : var(--colorC);
+            /* stroke-miterlimit : 10; */
+            /* AGREGADO */
+            stroke-width              : 1;   /* Grosor del trazo */
+            stroke-dasharray          : 10;  /* Crea líneas punteadas o rayadas en SVG y CSS. Define la longitud de las líneas y los espacios entre ellas. */
+            stroke-dashoffset         : 0;   /* Desplaza el patrón de trazos y espacios a lo largo de la línea. */
+            animation-name            : TrazoC;
+            animation-duration        : 1s;
+            animation-timing-function : ease-in-out;
+            animation-fill-mode       : forwards; /* forwards: El elemento mantendrá el estilo aplicado por la última clave de la animación después de que la animación haya finalizado. */
+        }
+        .st1{
+            fill : none; /* var(--colorC) */
+            /* AGREGADO */
+            animation-name            : RellenoC;
+            animation-delay           : .5s;
+            animation-duration        : 2s;
+            animation-timing-function : ease-in-out;
+            animation-fill-mode       : forwards;
+        }
+		.st2{
+            fill              : none;
+            stroke            : var(--colorE);
+            /* stroke-miterlimit : 10; */
+            /* AGREGADO */
+            stroke-width              : 1;
+            stroke-dasharray          : 10;
+            stroke-dashoffset         : 0;
+            animation-name            : TrazoE;
+            animation-duration        : 2s;
+            animation-timing-function : ease-in-out;
+            animation-fill-mode       : forwards;
+        }
+		.st3{
+            fill : none; /* var(--colorE) */
+            /* AGREGADO */
+            animation-name            : RellenoE;
+            animation-delay           : 1.5s;
+            animation-duration        : 2s;
+            animation-timing-function : ease-in-out;
+            animation-fill-mode       : forwards;
+        }
+        @keyframes TrazoC{
+            from{
+                stroke-dasharray  : 10;
+                stroke-dashoffset : 0;
+                stroke            : var(--colorC);
+            }
+            to{
+                stroke-dasharray  : 900;
+                stroke-dashoffset : 200;
+                stroke            : transparent;
+            }
+        }
+        @keyframes RellenoC{
+            from{
+                fill      : transparent;
+                transform : translateY(0) scaleY(1);
+            }
+            20% {
+                transform : translateY(-50px) scaleY(0.5);
+            }
+            40% {
+                transform: translateY(20px) scaleY(1);
+            }
+            60% {
+                transform : translateY(-20px) scaleY(0.5);
+            }
+            to{
+                fill      : var(--colorC);
+                transform : translateY(0) scaleY(1);
+            }
+        }
+        @keyframes TrazoE{
+            from{
+                stroke-dasharray  : 10;
+                stroke-dashoffset : 0;
+                stroke            : var(--colorE);
+            }
+            to{
+                stroke-dasharray  : 900;
+                stroke-dashoffset : 200;
+                stroke            : transparent;
+            }
+        }
+        @keyframes RellenoE{
+            from{
+                fill      : transparent;
+                transform : translateY(0) scaleY(1);
+            }
+            20% {
+                transform : translateY(-50px) scaleY(0.5);
+            }
+            40% {
+                transform: translateY(20px) scaleY(1);
+            }
+            60% {
+                transform : translateY(-20px) scaleY(0.5);
+            }
+            to{
+                fill      : var(--colorE);
+                transform : translateY(0) scaleY(1);
+            }
+        }
+	</style>
+	<circle  id="TrazoC" class="st0" cx="127.7" cy="129.4" r="110.1"/>
+	<circle  id="RellenoC" class="st1" cx="127.7" cy="129.4" r="110.1"/>
+	<polygon id="TrazoE" class="st2" points="363.7,19.2 400.4,93.6 482.5,105.5 423.1,163.5 437.1,245.2 363.7,206.6 290.2,245.2 304.3,163.5 244.9,105.5 327,93.6 "/>
+	<polygon id="RellenoE" class="st3" points="363.7,19.2 400.4,93.6 482.5,105.5 423.1,163.5 437.1,245.2 363.7,206.6 290.2,245.2 304.3,163.5 244.9,105.5 327,93.6 "/>
+</svg>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        *{
+            margin          : 0;
+            padding         : 0;
+            box-sizing      : border-box;
+            font-family     : Arial, Helvetica, sans-serif;
+            scrollbar-color : crimson teal;
+            scrollbar-width : thin;
+        }
+        .container{
+            width            : 100%;
+            padding          : 30px;
+            background-color : black;
+        }
+        /* DESVANECIMIENTO */
+        .container img{
+            width      : 300px;
+            filter     : drop-shadow(10px 7px 5px #555);
+            mask-image : linear-gradient(#555 80%, transparent);
+        }
+        /* ENCAPSULAR VARIAS CLASES */
+        .cero :is(.uno, .dos){
+            background-color: red;
+            width: 100px;
+        }
+        /* CARD */
+        .card{
+            width         : 280px;
+            padding       : 8px;
+            border-radius : 24px;
+            border-style  : solid;
+            border-width  : 1px;
+            border-color  : black;
+        }
+        .card-image{
+            padding       : 0;
+            border-radius : 16px; /* card-image.border-radius = card.border-radius - card.padding */
+            border-style  : solid;
+            border-width  : 1px;
+            border-color  : black;
+            overflow      : hidden;
+        }
+        .card-image img{
+            width                      : 100%;
+            object-fit                 : cover;
+            display                    : block;
+            transition-duration        : .5s;
+            transition-timing-function : ease-in-out;
+            transition-property        : transform;
+        }
+        .card-image img:hover{
+            transform : scale(1.4);
+        }
+        /* INPUT */
+        .label{
+            margin: 20px auto;
+            display: grid;
+            grid-template-areas: 'input';
+        }
+        .input{
+            grid-area: input;
+            width: 300px;;
+            font: inherit;
+            border-radius: 10px;
+            border: 1px solid gray;
+            padding: .7rem 1.5rem;
+        }
+        .label_name{
+            grid-area: input;
+            z-index: 100;
+            width: max-content;
+            margin-left: 1rem;
+            padding: 0 .5rem;
+            align-self: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            transition: transform .2s;
+            transform-origin: center left;
+        }
+        /* .input:focus + .label_name, .input:not(:placeholder-shown) + .label_name */
+        .input:where(:focus, :not(:placeholder-shown)) + .label_name{
+            transform: translateY(-50%) scale(.7);
+            background-color: white;
+        }
+        /* MEDIA QUERY */
+        /* @media (width >= 600px) and (width <= 1200px){} */
+        /* LETRAS CON IMAGENES */
+        h1{
+            background-image   : url('./paisaje.jpg');
+            background-clip    : text;
+            background-color   : white;
+            color              : transparent;
+            font-weight        : 900;
+            font-size          : 50px;
+            background-size    : cover;
+            background-position: center;
+            background-repeat  : no-repeat;
+            display            : inline;
+
+            text-emphasis      : 'A';
+            text-emphasis-color: red;
+        }
+        h2::first-letter{
+            font-size: 70px;
+            color: teal;
+        }
+        /* DIV CLIPPING */
+        .clipping{
+            height: 150px;
+            width: 150px;
+            /* background-color: crimson; */
+            background-image: linear-gradient(to bottom right, crimson, coral);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            position: relative;
+        }
+        .clipping::after{
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to bottom right, crimson, coral);
+            border-radius: inherit;
+            filter: blur(25px) brightness(1.5);
+            transform: translateY(15%) scale(0.95);
+            z-index: -1;
+        }
+        /* 3D */
+        .container-form{
+            perspective: 1000px;
+        }
+        .form{
+            display  : flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            background-color: red;
+
+            transform-style: preserve-3d;
+
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-property: transform;
+
+            /* animation-name           : test;
+            animation-duration       : 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1; */
+            /*infinite*/
+        }
+        .input-field{
+            flex: 1 0 10rem;
+        }
+        .input-field input{
+            width  : 100%;
+            padding: 5px 10px;
+        }
+        .button{
+            flex: 1 0 5rem;
+        }
+        .form:hover{
+            transform: rotateX(45deg);
+        }
+        /* @keyframes test{
+            from{
+                transform: rotateX(0deg);
+            }
+            50%{
+                transform: rotateX(45deg);
+            }
+            to{
+                transform: rotateX(90deg);
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="container-form">
+        <form class='form'>
+            <div class='input-field'>
+                <input type='text' placeholder='Usuario' required>
+            </div>
+            <div class='input-field'>
+                <input type='password' placeholder='Contraseña' required>
+            </div>
+            <button type='submit' class="button">Enviar</button>
+        </form>
+    </div>
+    <div class='container'>
+        <img src='./hamburguesa.webp'>
+    </div>
+    <div class='cero'>
+        <div class='uno'>
+            asd
+        </div>
+        <div class='dos'>
+            asd
+        </div>
+    </div>
+    <div class='card'>
+        <div class='card-image'>
+            <img src='./paisaje.jpg'>
+        </div>
+    </div>
+    <label class='label'>
+        <input type='text' placeholder=' ' class='input'>
+        <span class='label_name'>Ingresa tu nombre</span>
+    </label>
+    <h1>Hola mundo</h1>
+    <h2>Texto</h2>
+    <div class='clipping'>
+        Ariel Villca Calle
+    </div>
+</body>
+</html>
