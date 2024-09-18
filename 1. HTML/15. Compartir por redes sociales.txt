@@ -1,0 +1,44 @@
+TWITTER
+    https://twitter.com/intent/tweet?text=Mensaje&url=https://google.com
+
+FACEBOOK
+    https://www.facebook.com/sharer.php?u=https://google.com
+    https://www.facebook.com/sharer/sharer.php?u=https://google.com
+
+LINKEDIN
+    https://www.linkedin.com/shareArticle?mini=true&url=https://google.com&title=Title&summary=&source=
+
+PINTEREST
+    https://pinterest.com/pin/create/button/?url=https://google.com&media=Title&description=Descripcion
+
+EMAIL
+    mailto:correo@dominio.com?subject=Asunto&body=mensaje&cc=correo_copia@dominio.com&bcc=correo_copia_oculta@dominio.com
+
+TELEFONO
+    tel:+1800229933
+
+WHATSAPP
+    whatsapp://send?text=Mensaje-Masivo
+
+    A Numero independiente (Consulta)
+        https://web.whatsapp.com?phone=59170565420&text=Mensaje-a-un-Punto
+        https://wa.me/59170565420?text=Mensaje-a-un-Punto
+    Navegador
+        https://web.whatsapp.com/send?text=Mensaje-Masivo
+        https://wa.me?text=Mensaje-Masivo
+
+TELEGRAM
+    tg://resolve?domain=tarmanau
+    https://telegram.me/tarmanau
+    https://t.me/+59171918177
+
+SKYPE
+    skype:NOMBRE_USUARIO?userinfo   // VER PERFIL
+    skype:NOMBRE_USUARIO?add        // AGREGAR A CONTACTOS
+    skype:NOMBRE_USUARIO?call       // LLAMAR
+    skype:NOMBRE_USUARIO?chat       // ENVIAR MENSAJE
+    skype:NOMBRE_USUARIO?voicemail  // MENSAJE DE VOZ
+
+MESSENGER
+    https://www.messenger.com/t/NOMBRE_USUARIO
+    https://www.messenger.com/t/jack.malbon.3

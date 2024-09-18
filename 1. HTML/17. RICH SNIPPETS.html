@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>RICH SNIPPETS</title>
+</head>
+<body>
+    <!-- https://schema.org/ -->
+    <script type='application/ld+json'>
+        // ARTICLE
+        {
+            "@content" : "https://schema.org",
+            "@type" : "NewsArticle",
+            "mainEntityOfPage" : {
+                "@type" : "WebPage",
+                "@id" : "https://google.com/article",
+            },
+            "headline" : "Article headline",
+            "image" : [
+                "URL_IMAGEN_1",
+                "URL_IMAGEN_2",
+                "URL_IMAGEN_3"
+            ],
+            "datePublished" : "2022-02-05T08:00:00+08:00",
+            "dateModified" : "2022-02-05T08:00:00+08:00",
+            "author" : {
+                "@type" : "Person",
+                "name" : "John Doe"
+            },
+            "publisher" : {
+                "@type" : "Organization",
+                "name" : "Google",
+                "logo" : {
+                    "@type" : "ImageObject",
+                    "url" : "https://google.com/logo.jpg"
+                }
+            },
+            "description" : "A most wonderful article"
+        }
+        // COOK
+        {
+            "@context":"https://schema.org",
+            "@type":"BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type" : "ListItem",
+                    "position": 1,
+                    "name": "Productos",
+                    "item": "https://www.ikea.com/es/es/cat/productos-products/"
+                },{
+                    "@type" : "ListItem",
+                    "position": 2,
+                    "name": "Menaje para cocinar, comer y beber",
+                    "item": "https://www.ikea.com/es/es/cat/menaje-kt001/"
+                },{
+                    "@type" : "ListItem",
+                    "position": 3,
+                    "name": "Platos y vajillas",
+                    "item": "https://www.ikea.com/es/es/cat/platos-vajillas-18860/"
+                },{
+                    "@type" : "ListItem",
+                    "position": 4,
+                    "name": "Platos llanos",
+                    "item": "https://www.ikea.com/es/es/cat/platos-llanos-18861/"
+                },{
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "FLAMSIG Plato para pizza",
+                    "item": "https://www.ikea.com/es/es/p/flamsig-plato-pizza-blanco-00505731/"
+                }
+            ]
+        }
+        // COOK 2
+        {
+            "@context":"https://schema.org/",
+            "@type":"Product",
+            "aggregateRating":{
+                "@type":"AggregateRating",
+                "ratingValue":"4.9",
+                "reviewCount":"22"
+            },
+            "brand":{
+                "@type":"Brand",
+                "name":"IKEA"
+            },
+            "description":"FLAMSIG Plato para pizza - blanco 32 cm. Apto para lavavajillas y microondas. Probado y aprobado para estar en contacto con alimentos.",
+            "image":[
+                "https://www.ikea.com/es/es/images/products/flamsig-plato-pizza-blanco__0968360_pe810432_s5.jpg"
+            ],
+            "mpn":"005.057.31",
+            "name":"FLAMSIG Plato para pizza - blanco 32 cm",
+            "offers":{
+                "@type":"Offer",
+                "availability":"https://schema.org/InStock",
+                "itemCondition":"https://schema.org/NewCondition",
+                "price":"2.5",
+                "priceCurrency":"EUR",
+                "seller":{
+                    "@type":"Organization",
+                    "name":"IKEA"
+                },
+                "url":"https://www.ikea.com/es/es/p/flamsig-plato-pizza-blanco-00505731/"
+            },
+            "review":[
+                {
+                    "@type":"Review",
+                    "author":{
+                        "@type":"Person",
+                        "name":"MARIA J."
+                    },
+                    "name":"Económico y funcional",
+                    "reviewBody":"Este plato para pizzas está muy bien para la calidad-precio",
+                    "reviewRating":{
+                        "@type":"Rating",
+                        "ratingValue":4
+                    }
+                },{
+                    "@type":"Review",
+                    "author":{
+                        "@type":"Person",
+                        "name":"NURIA"
+                    },
+                    "name":"El tamaño es perfecto, la",
+                    "reviewBody":"El tamaño es perfecto, la pizza no se sale al cortarla ;-)",
+                    "reviewRating":{
+                        "@type":"Rating",
+                        "ratingValue":5
+                    }
+                }
+            ],
+            "sku":"005.057.31",
+            "url":"https://www.ikea.com/es/es/p/flamsig-plato-pizza-blanco-00505731/"
+        }
+        // COOK 3
+        [
+            {
+                "@context":"http:\/\/schema.org\/",
+                "@type":"Recipe",
+                "name":"Receta de Pastel de chocolate esponjoso y jugoso",
+                "description":"El pastel de chocolate esponjoso y jugoso que mostramos en RecetasGratis es muy f\u00e1cil de hacer y r\u00e1pido. Sin apenas darte cuenta obtendr\u00e1s una tarta digna de pasteler\u00eda y perfecta para cualquier evento, \u00bfte animas?Existe una infinidad de formas de elaborar un pastel de chocolate en casa pero, \u00bfcu\u00e1ntas de ellas son f\u00e1ciles? \u00a1Te aseguramos que esta lo es! Adem\u00e1s de mostrarte c\u00f3mo hacer un bizcocho con sabor a chocolate, te explicamos los sencillos pasos que debes seguir para aprender a elaborar una cobertura b\u00e1sica, pero deliciosa, y los mejores utensilios para decorar tu pastel. As\u00ed, si est\u00e1s pensando en realizar tu propia tarta para un cumplea\u00f1os, reuni\u00f3n familiar o con amigos y no sabes por d\u00f3nde empezar, \u00a1sigue leyendo! Te ense\u00f1amos c\u00f3mo hacer un pastel de chocolate decorado paso a paso.",
+                "author":{
+                    "@type":"Person",
+                    "name":"Eva L\u00f3pez"
+                },
+                "image":[
+                    "https:\/\/t2.rg.ltmcdn.com\/es\/posts\/7\/7\/6\/pastel_de_chocolate_esponjoso_y_jugoso_10677_orig.jpg",
+                    "https:\/\/t1.rg.ltmcdn.com\/es\/posts\/7\/7\/6\/pastel_de_chocolate_esponjoso_y_jugoso_10677_600_square.jpg"
+                ],
+                "totalTime":"PT1H30M",
+                "recipeYield":6,
+                "recipeCategory":"Postre",
+                "recipeIngredient":[
+                    "175 gramos de Mantequilla",
+                    "200 gramos de Harina de reposter\u00eda",
+                    "4 Huevos",
+                    "150 gramos de Az\u00facar",
+                    "50 gramos de Cacao en polvo",
+                    "1 cucharadita de Polvos de hornear",
+                    "25 gramos de Maicena",
+                    "75 gramos de Pepitas de chocolate",
+                    "1 pizca de Sal",
+                    "200 gramos de Chocolate negro",
+                    "200 mililitros de Crema de leche",
+                    "1 cucharada sopera de Mantequilla"
+                ],
+                "recipeInstructions":[
+                    {
+                        "@type":"HowToStep",
+                        "text":"Para empezar con la preparaci\u00f3n del pastel de chocolate esponjoso deber\u00e1s batir primero la mantequilla hasta obtener una crema suave. Para ello, es recomendable que la mantequilla se encuentre a temperatura ambiente."
+                    },{
+                        "@type":"HowToStep",
+                        "text":"Luego, incorpora el az\u00facar y sigue batiendo. Cuando lo tengas bien integrado, a\u00f1ade los huevos sin dejar de mover. Recuerda que los huevos deben ir ech\u00e1ndose uno a uno, de manera que hasta que no est\u00e9 completamente integrado el primero, no agregues el segundo."
+                    },{
+                        "@type":"HowToStep",
+                        "text":"A continuaci\u00f3n, a\u00f1ade los todos los ingredientes secos previamente tamizados, es decir, el cacao en polvo, la harina, los polvos de hornear, la maicena, la levadura y la sal. Esto ayudar\u00e1 a evitar que se formen grumos en la masa, aportar\u00e1 aire a la mezcla y, por tanto, lograr\u00e1 un bizcocho de chocolate m\u00e1s esponjoso y h\u00famedo. Cabe destacar que la cantidad de chocolate es al gusto, de manera que si lo prefieres puedes a\u00f1adir m\u00e1s o menos."
+                    },{
+                        "@type":"HowToStep",
+                        "text":"Mezcla haciendo movimientos envolventes hasta conseguir una masa uniforme y homog\u00e9nea, y justo antes de terminar de integrar por completo la harina, a\u00f1ade los trozos de chocolate. Al incorporarlos de esta forma, los trozos quedan repartidos por todo el bizcocho y no se quedan en el fondo durante su cocci\u00f3n en el horno."
+                    },{
+                        "@type":"HowToStep",
+                        "text":"Cuando tengas lista la masa del pastel de chocolate, es el momento de hornearla. Para ello, vac\u00eda la mezcla en un molde previamente engrasado con mantequilla y cocina en el horno a durante 30-40 minutos, con calor solo abajo y teniendo en cuenta que en funci\u00f3n del tipo de horno puede tardar m\u00e1s o menos en hacerse. Lo ideal es utilizar un molde de 18 cm, pero si no dispones de \u00e9l puedes usar el que tengas en casa."
+                    },{
+                        "@type":"HowToStep",
+                        "text":"Cuando lo tengas listo, ret\u00edralo del horno y deja que se enfr\u00ede. Ver\u00e1s que el resultado es un bizcocho esponjoso y jugoso, perfecto para decorar y preparar un pastel de cumplea\u00f1os, por ejemplo. As\u00ed, para finalizar tu pastel de chocolate, solo queda preparar la cobertura. Para ello, calienta la crema de leche y, una vez alcanzado el primer hervor, vi\u00e9rtela sobre el chocolate troceado y remueve para que se funda e integre. De forma opcional, puedes a\u00f1adir la mantequilla para conseguir un extra de brillo. Reserva el frosting en el frigor\u00edfico para que adquiera consistencia. As\u00ed mismo, una vez fr\u00edo, reserva el bizcocho tambi\u00e9n en la nevera."
+                    },{
+                        "@type":"HowToStep",
+                        "text":"Pasada una hora aproximadamente, ya podr\u00e1s retirar el bizcocho y la cobertura para decorarlo. Es importante que la torta tambi\u00e9n se mantenga en fr\u00edo para evitar que se desprendan migas al momento de cubrirla con el chocolate. Para decorar el pastel, puedes cortarlo por la mitad y rellenarlo, o simplemente cubrirlo por fuera, procurando que el chocolate se distribuya de manera uniforme. Y si quieres mejorar la presentaci\u00f3n, reserva cobertura para introducir en una manga pastelera y realizar formas a tu gusto."
+                    },{
+                        "@type":"HowToStep",
+                        "text":"Una vez decorado, reserva la tarta en el frigor\u00edfico hasta el momento de consumirla. Como ves, se trata de un pastel de chocolate esponjoso y jugoso perfecto para cualquier celebraci\u00f3n, ocasi\u00f3n especial o para darnos un capricho. Y si quieres acabar de coronar tu postre casero, preparar una salsa de naranja, sirope de fresa, de mango, o del sabor que m\u00e1s te guste, puesto que el chocolate encaja con pr\u00e1cticamente cualquiera de ellos."
+                    }
+                ],
+                "aggregateRating":{
+                    "@type":"AggregateRating",
+                    "ratingValue":"4.3",
+                    "ratingCount":626
+                }
+            },{
+                "@context":"http:\/\/schema.org\/",
+                "@type":"BreadcrumbList",
+                "itemListElement":[
+                    {
+                        "@type":"ListItem",
+                        "position":1,
+                        "name":"Recetas",
+                        "item":"https:\/\/www.recetasgratis.net"
+                    },{
+                        "@type":"ListItem",
+                        "position":2,
+                        "name":"Postres",
+                        "item":"https:\/\/www.recetasgratis.net\/Recetas-de-Postres-listado_receta-17_1.html"
+                    },{
+                        "@type":"ListItem",
+                        "position":3,
+                        "name":"Pasteles",
+                        "item":"https:\/\/www.recetasgratis.net\/Pasteles-busqCate-1.html"
+                    }
+                ]
+            }
+        ]
+    </script>
+</body>
+</html>

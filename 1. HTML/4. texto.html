@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto</title>
+    <style>
+        *{
+            margin          : 0;
+            padding         : 0;
+            box-sizing      : border-box;
+            list-style      : none;
+            text-decoration : none;
+            outline         : none;
+            scroll-behavior : smooth; /* Scroll Suave */
+            font-size       : inherit;
+            font-family     : inherit;
+            font-weight     : inherit;
+            font-style      : inherit;
+        }
+        body {
+            font-size   : 16px;
+            font-family : Arial, sans-serif;
+            font-weight : normal;
+            font-style  : normal;
+        }
+        /*
+            1. 1.067 - Segunda menor (Minor Second)
+                Aplicación: Esta es una escala muy pequeña, lo que significa que las diferencias entre los tamaños de las fuentes serán apenas perceptibles.
+                Tipo de tipografía: Ideal para tipografías sans-serif minimalistas y limpias como Helvetica, Roboto, o Open Sans.
+                Contexto: Útil para interfaces donde se necesita una diferenciación sutil entre el texto, como formularios, menús de navegación, o interfaces de usuario que requieren uniformidad.
+            2. 1.125 - Segunda mayor (Major Second)
+                Aplicación: Proporciona una diferencia algo mayor en los tamaños, pero sigue siendo sutil.
+                Tipo de tipografía: Funciona bien con tipografías sans-serif y serif modernas como Arial, Lato, o Georgia.
+                Contexto: Se usa en sitios web que necesitan una jerarquía clara pero suave, como blogs o artículos de noticias, donde hay varios niveles de encabezados y subtítulos.
+            3. 1.200 - Tercera menor (Minor Third)
+                Aplicación: Esta escala es adecuada cuando se desea una mayor diferenciación entre los tamaños de fuente sin ser demasiado dramático.
+                Tipo de tipografía: Ideal para serif clásicas como Times New Roman, Merriweather, o Crimson Text, ya que proporciona elegancia sin sacrificar la legibilidad.
+                Contexto: Se usa en sitios de noticias o blogs de lectura extensa, donde la legibilidad y la jerarquía visual son esenciales pero no deben ser demasiado marcadas.
+            4. 1.250 - Tercera mayor (Major Third)
+                Aplicación: Ofrece una buena separación entre tamaños, equilibrando la jerarquía visual sin parecer agresiva.
+                Tipo de tipografía: Funciona bien con tipografías sans-serif versátiles como Montserrat o Source Sans Pro, o serif más tradicionales como Garamond.
+                Contexto: Se usa en proyectos editoriales o sitios corporativos donde la legibilidad y el estilo se combinan bien.
+            5. 1.333 - Cuarto perfecto (Perfect Fourth)
+                Aplicación: Esta escala empieza a ser más notoria, creando una jerarquía visual clara y elegante.
+                Tipo de tipografía: Ideal para tipografías serif como Baskerville o Playfair Display, que tienen un aire más clásico y elegante.
+                Contexto: Se utiliza en sitios de publicaciones o blogs de diseño donde la tipografía juega un papel importante en la experiencia visual.
+            6. 1.414 - Cuarto aumentado (Augmented Fourth)
+                Aplicación: Escala más pronunciada, donde los cambios en los tamaños de la fuente son evidentes, creando un contraste fuerte.
+                Tipo de tipografía: Ideal para tipografías serif y display como Bodoni o Didot, que tienen trazos finos y elegantes que se benefician de jerarquías más claras.
+                Contexto: Perfecto para sitios de moda, portfolios de diseño o publicaciones artísticas, donde se busca una experiencia visual más dramática y estilizada.
+            7. 1.500 - Quinto perfecto (Perfect Fifth)
+                Aplicación: La diferencia entre los tamaños es significativa, lo que da como resultado una jerarquía fuerte y clara.
+                Tipo de tipografía: Funciona bien con tipografías de display como Futura o Oswald, o serif clásicas como Caslon.
+                Contexto: Ideal para titulares, páginas de presentación, o sitios donde se desea un alto contraste tipográfico, como en el diseño editorial o publicitario.
+            8. 1.618 - Proporción áurea (Golden Ratio)
+                Aplicación: La escala más icónica y estéticamente equilibrada, utilizada para lograr una jerarquía armoniosa y visualmente agradable.
+                Tipo de tipografía: Ideal para cualquier tipo de tipografía, pero especialmente poderosa con serif elegantes como Trajan, o sans-serif estilizadas como Proxima Nova.
+                Contexto: Utilizado en proyectos donde la estética visual y la armonía son clave, como branding, sitios corporativos, o proyectos editoriales de lujo.
+
+
+            LA BASE SIEMPRE SERA "P"
+            - 1.067 - Segunda menor    (Minor Second)
+            - 1.125 - Segundo mayor    (Major Second)
+            - 1.200 - Tercera menor    (Minor Third)
+            - 1.250 - Tercera mayor    (Major Third)
+            - 1.333 - Cuarto perfecto  (Perfect Fourth)
+            - 1.414 - Cuarto aumentado (Augmented Fourth)
+            - 1.500 - Quinto perfecto  (Perfect Fifth)
+            - 1.618 - Proporción áurea (Golden Ratio)
+
+            TAMAÑO BASE
+                PCS         -> 16px
+                Tablets     -> 15px
+                Smartphones -> 14px
+
+            Ej:
+                Pantalla: Pcs
+                Base    : 16px
+                Escala  : 1.250 (Tercera Mayor)
+
+                h1    -> 48.83 x 1.250 = 61.04px
+                h2    -> 39.06 x 1.250 = 48.83px
+                h3    -> 31.25 x 1.250 = 39.06px
+                h4    -> 25    x 1.250 = 31.25px
+                h5    -> 20    x 1.250 = 25px
+                h6    -> 16    x 1.250 = 20px
+                p     -> 16px   BASE
+                small -> 16    / 1.250 = 12.8px
+                sub   -> 12.8  / 1.250 = 10.24px
+        */
+        h1{
+            font-size     : 61.04px;
+            font-weight   : 700;
+            letter-spacing: calc(61.04px * 0.015);     /* Tracking -> Aumenta el tracking en 1px */
+            font-kerning  : normal;  /* Kerning */
+            line-height   : 67.14px; /* Interlineado -> Aproximadamente 1.1 veces el tamaño de la fuente */
+        }
+        h2{
+            font-size     : 48.83px;
+            font-weight   : 700;
+            letter-spacing: calc(48.83 * 0.015);  /* Tracking */
+            font-kerning  : normal; /* Kerning */
+            line-height   : 58.6px; /* Interlineado -> 1.2 veces el tamaño de la fuente */
+        }
+        h3{
+            font-size     : 39.06px;
+            font-weight   : 700;
+            letter-spacing: calc(39.06px * 0.012);   /* Tracking */
+            font-kerning  : normal;  /* Kerning */
+            line-height   : 50.78px; /* Interlineado -> 1.3 veces el tamaño de la fuente */
+        }
+        h4{
+            font-size     : 31.25px;
+            font-weight   : 600;
+            letter-spacing: calc(31.25px * 0.01); /* Tracking */
+            font-kerning  : normal;               /* Kerning */
+            line-height   : 40.63px;              /* Interlineado -> 1.3 veces el tamaño de la fuente */
+        }
+        h5{
+            font-size     : 25px;
+            font-weight   : 600;
+            letter-spacing: calc(25px * 0.01); /* Tracking */
+            font-kerning  : normal;            /* Kerning */
+            line-height   : 35px;              /* Interlineado -> 1.4 veces el tamaño de la fuente */
+        }
+        h6{
+            font-size     : 20px;
+            font-weight   : 600;
+            letter-spacing: calc(20px * 0.01); /* Tracking */
+            font-kerning  : normal;            /* Kerning */
+            line-height   : 28px;              /* Interlineado -> 1.4 veces el tamaño de la fuente */
+        }
+        p{
+            font-size     : 16px;
+            font-weight   : 400;
+            letter-spacing: calc(16px * 0.01); /* Tracking */
+            font-kerning  : auto;              /* Kerning */
+            line-height   : 24px;              /* Interlineado -> 1.5 veces para mejor legibilidad */
+        }
+        small{
+            font-size     : 12.8px;
+            font-weight   : 400;
+            letter-spacing: 0px;    /* Tracking */
+            font-kerning  : auto;   /* Kerning */
+            line-height   : 19.2px; /* Interlineado -> 1.5 veces para mejor legibilidad */
+        }
+        sub{
+            font-size     : 10.24px;
+            font-weight   : 400;
+            letter-spacing: 0px;     /* Tracking */
+            font-kerning  : auto;    /* Kerning */
+            line-height   : 15.36px; /* Interlineado -> 1.5 veces para mejor legibilidad */
+        }
+    </style>
+</head>
+<body>
+    <h1>Anita lava la tina - Anita lava la tina</h1>
+    <h2>Anita lava la tina - Anita lava la tina</h2>
+    <h3>Anita lava la tina - Anita lava la tina</h3>
+    <h4>Anita lava la tina - Anita lava la tina</h4>
+    <h5>Anita lava la tina - Anita lava la tina</h5>
+    <h6>Anita lava la tina - Anita lava la tina</h6>
+    <p>Anita lava la tina - Anita lava la tina</p>
+    <small>Anita lava la tina - Anita lava la tina</small>
+    <br>
+    <sub>Anita lava la tina - Anita lava la tina</sub>
+</body>
+</html>

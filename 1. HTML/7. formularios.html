@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    <form action='./' method='GET' enctype='multipart/form-data' autocomplete='off'>
+        <!--
+            enctype='application/x-www-form-urlencoded'  ->  POR DEFECTO
+            enctype='multipart/form-data'
+            enctype='text/plain'
+        -->
+        <input type='hidden' name='id_usuario' value='1'>
+        <div>
+            <label for='numeroF'>Número: </label>
+            <input type='number' name='numero' id='numeroF' value='123456' min='100000' max='999999' inputmode='numeric' placeholder='Ej: 123456' autofocus required>
+        </div>
+        <div>
+            <label for='numero_decimalF'>Número Decimal: </label>
+            <input type='number' name='numero_decimal' id='numero_decimalF' value='123456' min='100000' max='999999' inputmode='decimal' placeholder='Ej: 123456' required>
+        </div>
+        <hr>
+        <div>
+            <label for='textoF'>Texto: </label>
+            <input type='text' name='texto' id='textoF' value='Juan Perez Gomez' minlength='3' maxlength='20' autocapitalize='characters' placeholder='Ej: Juana M' pattern='[ A-Za-z]{3,20}' autocomplete='on' required>
+        </div>
+        <hr>
+        <div>
+            <label for='busquedaF'>Busqueda</label>
+            <input type='search' name='busqueda' id='busquedaF' value='Mi Ocurrencia' inputmode='search'>
+        </div>
+        <hr>
+        <div>
+            <label for='correoF'>Correo Electrónico: </label>
+            <input type='email' name='correo' id='correoF' value='juan@gmail.com' inputmode='email' readonly>
+        </div>
+        <hr>
+        <div>
+            <label for='claveF'>Contraseña</label>
+            <input type='password' name='clave' id='claveF' value='123' autocomplete='off' required>
+        </div>
+        <hr>
+        <div>
+            <label for='fechaF'>Fecha</label>
+            <input type='date' name='fecha' id='fechaF' value='2021-11-11'>
+        </div>
+        <hr>
+        <div>
+            <label for='fechahoraF'>Fecha y hora</label>
+            <input type='datetime-local' name='fechahora' id='fechahoraF' value='2021-11-11T12:30'><!--TAMBIEN FUNCION CON  value='2021-11-11T12:30:36'-->
+        </div>
+        <hr>
+        <div>
+            <label for='mesF'>Mes</label>
+            <input type='month' name='mes' id='mesF' value='2021-11'>
+        </div>
+        <hr>
+        <div>
+            <label for='semanaF'>Semana</label>
+            <input type='week' name='semana' id='semanaF' value='2021-W49'>
+        </div>
+        <hr>
+        <div>
+            <label for='horaF'>Hora</label>
+            <input type='time' name='hora' id='horaF' value='01:23'>
+        </div>
+        <hr>
+        <div>
+            <label for='rangoF'>Rango</label>
+            <input type='range' name='rango' id='rangoF' value='27' min='10' max='110' step='10'>
+        </div>
+        <hr>
+        <div>
+            <label for='colorF'>Color</label>
+            <input type='color' name='color' id='colorF' value='#bc3838'>
+        </div>
+        <hr>
+        <div>
+            <label for='horaF'>Hora</label>
+            <input type='time' name='hora' id='horaF' value='01:23'>
+        </div>
+        <hr>
+        <fieldset>
+            <legend>Hobbies</legend><!--tabindex es la posicion de tabulacion de los componentes-->
+            <label for='hobbies1F'>Música</label>
+            <input type='checkbox' tabindex='1' name='hobbie' value='Música' id='hobbies1F' checked>
+            <label for='hobbies2F'>Deporte</label>
+            <input type='checkbox' tabindex='2' name='hobbie' value='Deporte' id='hobbies2F' style="accent-color: #ff4d6e;">
+            <label for='hobbies3F'>Lectura</label>
+            <input type='checkbox' tabindex='3' name='hobbie' value='Lectura' id='hobbies3F'>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>Genero</legend><!--tabindex es la posicion de tabulacion de los componentes-->
+            <label for='genero1F'>Femenino</label>
+            <input type='radio' tabindex='4' name='genero' value='Femenino' id='genero1F' checked>
+            <label for='genero2F'>Masculino</label>
+            <input type='radio' tabindex='5' name='genero' value='Masculino' id='genero2F' style="accent-color: #ff4d6e;">
+        </fieldset>
+        <div>
+            <label for='telefonoF'>Telefono</label>
+            <input type='tel' name='telefono' id='telefonoF' value='71918177' inputmode='tel' required>
+        </div>
+        <hr>
+        <div>
+            <label for='enlaceF'>Enlace</label>
+            <input type='url' name='enlace' id='enlaceF' value='http:182.123.123.1' inputmode='url' required>
+        </div>
+        <hr>
+        <div>
+            <label for='archivoF'>Archivo</label>
+            <input type='file' name='archivo' id='archivoF' accept='image/*'>
+        </div>
+        <hr>
+        <div>
+            <label>
+                Choose a browser from this list:
+                <input list='browsers' name='myBrowser' id="browserInput" required>
+            </label>
+            <datalist id='browsers'>
+                <option value='Chrome'>
+                <option value='Firefox'>
+                <option value='Internet Explorer'>
+                <option value='Opera'>
+                <option value='Safari'>
+                <option value='Microsoft Edge'>
+            </datalist>
+        </div>
+        <hr>
+        <div>
+            <label for='seleccionF'>Proceso</label>
+            <select name='seleccion' id='seleccionF' required>
+                <option selected disabled>Seleccione una opción</option>
+                <optgroup label='Inicio'>
+                    <option value='1'>Solicitud</option>
+                    <option value='2'>Confirmacion</option>
+                </optgroup>
+                <optgroup label='Proceso'>
+                    <option value='3'>Aceptacion</option>
+                    <option value='4'>Filtracion</option>
+                </optgroup>
+                <optgroup label='Finalizacion'>
+                    <option value='5'>Entrega y finalizacion</option>
+                </optgroup>
+            </select>
+        </div>
+        <hr>
+        <div>
+            <label for='textareaF'>Area de texto</label>
+            <textarea name='textarea' id='textareaF' value='Este es el textarea' cols='30' rows='10' required>asd</textarea>
+        </div>
+        <hr>
+        <div>
+            <label for='file'>File progress:</label>
+            <progress id='file' max='100' value='70'> 70.8% </progress>
+        </div>
+        <hr>
+        <div>
+            <label for='botonF'>Boton</label>
+            <input type='button' name='boton' id='botonF' value='Este es el boton'>
+        </div>
+        <hr>
+        <div>
+            <label for='resetF'>Reset</label>
+            <input type='reset' name='reset' id='resetF' value='Este es el reset'>
+        </div>
+        <hr>
+        <div>
+            <label for='imagenF'>Imagen</label>
+            <input type='image' name='imagen' src='../assets/img/material.png' id='imagenF' width='100' height='100' required><!--Es una imagen que funciona como submit-->
+        </div>
+        <hr>
+        <div>
+            <label for='enviarF'>Enviar</label>
+            <input type='submit' name='enviar' id='enviarF' value='Enviar'>
+        </div>
+        <hr>
+    </form>
+    <!--
+        onchange='console.log(this.value)'
+        oninvalid='this.setCustomValidity('Ingrese su CI')'
+        oninput='setCustomValidity('')'
+    -->
+    <script>
+        const input = document.getElementById('browserInput');
+        input.addEventListener('change',()=>{
+            const inputValue = this.value.toLowerCase();
+            const options = document.querySelectorAll('#browsers option');
+            let valid = false;
+            options.forEach(option => {
+                const optionValue = option.value.toLowerCase();
+                if(optionValue === inputValue)
+                    valid = true;
+            });
+            if(!valid)
+                this.value = '';
+        });
+    </script>
+</body>
+</html>

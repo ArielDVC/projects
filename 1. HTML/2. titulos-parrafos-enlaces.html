@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Los elementos de encabezado implementan seis niveles de encabezado del documento,
+        <h1> es el más importante, y <h6>, el menos importante. Un elemento de encabezado
+        describe brevemente el tema de la sección que presenta. La información de encabezado
+        puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de
+        contenidos para un documento automáticamente.
+    -->
+    <h1>Titulo H1</h1>
+    <h2>Titulo H2</h2>
+    <h3>Titulo H3</h3>
+    <h4>Titulo H4</h4>
+    <h5>Titulo H5</h5>
+    <h6>Titulo H6</h6>
+    <!--
+        El elemento p (párrafo) es el apropiado para distribuir el texto en párrafos.
+        Atributos
+        title : título consultivo del elemento.
+        dir   : dirección del texto débil/neutral - 'ltr' o 'rtl'
+        lang  : código de idioma
+        align : Indica la alineación horizontal con relación al contexto - 'left', 'center', 'right', o 'justify'
+    -->
+    <p title='Título del Párrafo' dir='ltr' lang='en'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quas odit ullam suscipit in deleniti eum ipsam vitae aut exercitationem? Dolorum laborum amet officiis quasi quidem quisquam iste voluptatibus aut?
+    </p>
+    <blockquote><!--blockquote -cita en bloque . Crea citas en bloque, marca las citas a otros autores o documentos.-->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo accusantium labore dolore odio, ducimus minus rerum dignissimos cupiditate quis. Aspernatur eum pariatur tempore cumque, eaque obcaecati voluptatibus qui alias modi!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid esse dicta ipsa perferendis iste corporis harum nam sed praesentium porro accusantium, officia maxime voluptatum eos? Corporis accusamus illum dolorum delectus!
+    </blockquote>
+    <div>
+        Lorem ipsum <sub>dolor</sub> sit amet <sup>consectetur</sup> adipisicing elit. Explicabo accusantium labore dolore odio, ducimus minus rerum dignissimos cupiditate quis. Aspernatur eum pariatur tempore cumque, eaque obcaecati voluptatibus qui alias modi!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid esse dicta ipsa perferendis iste corporis harum nam sed praesentium porro accusantium, officia maxime voluptatum eos? Corporis accusamus illum dolorum delectus!
+    </div>
+    <code><!--Es el apropiado para marcar el código de un programa.-->
+        function HolaMundo(){
+            console.log('Hola Mundo');
+        }
+        HolaMundo();
+    </code>
+    <pre>Hola Mundo</pre> <!--El Elemento HTML <pre> (o Texto HTML Preformateado) representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo. Los espacios dentro de este elemento también son mostrados como están escritos.-->
+    <cite>Author: Juan Perez Gomez</cite><!--	cite -cita . Marca una referencia a una fuente, o el autor de un texto citado.-->
+    <figure>Hola Mundo</figure> <!--El elemento HTML <figure> representa contenido independiente, a menudo con un título. Si bien se relaciona con el flujo principal, su posición es independiente de éste. Por lo general, se trata de una imagen, una ilustración, un diagrama, un fragmento de código, o un esquema al que se hace referencia en el texto principal, pero que se puede mover a otra página o a un apéndice sin que afecte al flujo principal.-->
+    <!--
+        Crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de
+        la misma página, direcciones de correo, o cualquier otra URL.
+        Atributos
+        href   : Contiene una URL o un fragmento de URL al cual apunta el enlace.
+        target : Especifica en donde desplegar la URL enlazada.
+                _self: Carga la URL en el mismo contexto de navegación que el actual. Este es el
+                    comportamiento por defecto.
+                _blank: Carga la URL en un nuevo contexto de navegación. Usualmente es una pestaña,
+                    sin embargo, los usuarios pueden configurar los navegadores para utilizar una
+                    ventana nueva en lugar de la pestaña.
+                _parent: Carga la URL en el contexto de navegación padre (parent) del actual. Si no
+                    existe el padre, este se comporta del mismo modo que _self.
+                _top: Carga la URL en le contexto más alto de navegación (el cual es un ancestro del
+                    actual, y no tiene padre (parent)). Si no hay padre (parent), este se comporta del
+                    mismo modo que _self.
+        type   : Especifica el tipo de medio (media type) en la forma de MIME type (en-US) para la UR
+            enlazada. Esto es únicamente informativo, sin ninguna funcionalidad incorporada.
+        rel    : Es un atributo del lenguaje de marcado HTML que, en un enlace entre dos documentos,
+            describe la relación que mantiene el documento de destino con el documento presente
+            (el que enlaza).
+            Ejemplo:
+                rel = 'inicio'
+                rel = 'ayuda'
+    -->
+    <a href='https://google.com' target='_blank' title='Enlace de prueba'>
+        Este es un enlace
+    </a>
+</body>
+</html>

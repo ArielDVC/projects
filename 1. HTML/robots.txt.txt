@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /about_us
+
+
+Disallow: /                 All
+Allow: /                    All
+User-agent: BadBot          No analizara el bot "BadBot"
+
+Sitemap: https://www.google.com/sitemap.xml
+
+
+NO DEBE ESTAR EN ROBOTS
+NOTA: la pagina para que no se indexe se debe hacer lo siguiente : <meta name='robots' content='noindex,nofollow'/>

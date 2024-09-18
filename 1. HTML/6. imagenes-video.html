@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <link rel='short icon' type='image/x-icon' href='../assets/img/material.ico'>
+    <!--
+        rel='icon'
+        rel='short icon'
+        rel='shortcut icon'
+
+        type='image'
+        type='image/x-icon'
+        type='image/png'
+        type='image/jpg'
+    -->
+</head>
+<body>
+    <!--IMAGENES-->
+    <img src='../assets/img/material.png' alt='Nombre de mi imagen alt' title='Nombre de mi imagen title' width='50' height='100'>
+    <embed src='../assets/img/material.svg' alt='Nombre de mi imagen alt' title='Nombre de mi imagen title' width='100' height='50'><!--TOMA PRIORIDAD EL WIDTH Y LUEGO EL HEIGHT-->
+    <!--AUDIO-->
+    <audio controls><!--autoplay controls muted-->
+        <source src='../assets/audio/Kodaline - High Hopes.mp3' type='audio/mp3'>
+        Su navegador no es compatible con el elemento de audio.
+    </audio>
+    <!--VIDEO-->
+    <video width='320' height='240' controls><!--autoplay controls muted-->
+        <source src='../assets/video/Devin Townsend - Why.mp4' type='video/mp4'>
+        <!--<source src='../assets/video/Devin Townsend - Why.ogg' type='video/ogg'>-->
+        <track default kind='captions' srclang='en' src='../assets/video/track/Why-en.vtt'/>
+        <track default kind='captions' srclang='es' src='../assets/video/track/Why-es.vtt'/>
+        Su navegador no es compatible con el elemento de video.
+    </video>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    <form action='./' method='POST' enctype='multipart/form-data' autocomplete='off'>
+        <div>
+            <label for='imagen1F'>Imagen de portada</label>
+            <input type='file' name='imagen[]' id='imagen1F' accept='image/*' required>
+        </div>
+        <br>
+        <div>
+            <label for='imagen2F'>Imagenes</label>
+            <input type='file' name='imagen[]' id='imagen2F' accept='image/*' multiple required>
+        </div>
+        <br>
+        <div>
+            <label for='seleccionF'>Proceso</label>
+            <select name='seleccion[]' id='seleccionF' multiple required>
+                <optgroup label='Inicio'>
+                    <option value='1' selected>Solicitud</option>
+                    <option value='2'>Confirmacion</option>
+                </optgroup>
+                <optgroup label='Proceso'>
+                    <option value='3'>Aceptacion</option>
+                    <option value='4' selected>Filtracion</option>
+                </optgroup>
+                <optgroup label='Finalizacion'>
+                    <option value='5'>Entrega y finalizacion</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <input type='submit' value='Enviar'>
+    </form>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <meta http-equiv='refresh' content='30'/>                                   <!--Refrescar pagina cada 30 segundos-->
+    <meta http-equiv='refresh' content='30;url=https://www.mozilla.org'/>       <!--Redirige a una pagina despues de 30 segundos-->
+
+    <title>Document</title>
+
+    <meta name='viewport'         content='width=device-width, initial-scale=1.0'/>
+    <meta name='title'            content='Your title content goes here'/>          <!--Titulo con palabra clave-->
+    <meta name='description'      content=''/>                                      <!--Maximo 155 caracteres-->
+    <meta name='subject'          content=''/>                                      <!--Igual al description pero mas breve-->
+    <meta name='keywords'         content=''/>                                      <!--Palabras Clave-->
+    <meta name='distribution'     content='global'/>                                <!--global, local or IU-->
+    <meta name='language'         content='Spanish'/>
+    <meta name='robots'           content='index, follow'/>                         <!--PARA POSICIONARSE-->
+    <meta name='generator'        content='PHP,JS,HTML,CSS'/>                       <!--CON QUE PROGRAMAS SE DESARROLLO-->
+    <meta name='author'           content='Nombre del autor'/>
+    <meta name='copyright'        content='Propietario del copyright'/>
+    <meta name='website'          content='https://shreethemes.in'/>
+    <meta name='email'            content='support@shreethemes.in'/>
+    <meta name='version'          content='1.0.0'/>
+    <meta name='designer'         content='Nombre del desarrollador o URL de la empresa desarrolladora'/>
+    <meta name='rating'           content='adult'/>                                 <!-- EJEMPLO general,mature,restricted,adult O RTA-5042-1996-1400-1577-RTA,14 years,safe for kids-->
+    <meta name='format-detection' content='telephone=no'/>                          <!-- telephone=no,email=no,address=no -->
+    <!--UBICACION DE LA EMPRESA-->
+    <meta name='geo.region'       content='US-MN'/>
+    <meta name='geo.regioncode'   content='BO-L'/>
+    <meta name='geo.placename'    content='Minneapolis'/>
+    <meta name='geo.position'     content='44.980257;-93.270034'/>
+    <meta name='ICBM'             content='44.980257,-93.270034'/>
+
+    <link rel='canonical' href='https://www.kiwilimon.com/login/nativo'>     <!-- SE USA POR DEFECTO - ES PARA TOMAR COMO CANONICA UNA URL DE VARIAS QUE TIENE EL MISMO CONTENIDO , USA PARA CONTENIDO ESPECIFICO, COMO UNA PUBLICACION O UN PERFIL, TAMBIEN SI SE ENVIA VARIABLES GET OPCIONALES COMO TALLAS, COLOR, ETC. NO SE DEBE USAR PARA PAGINACION U SOLO DEBE SER USADO CUANDO HAY CONTENIDO DUPLICADO-->
+    <link rel='amphtml'   href='https://www.kiwilimon.com/amp/login/nativo'> <!-- ENCASO DE QUE SE TENGA UNA PAGINA AMP-->
+
+    <!--
+        Una de las principales funciones de los meta tags es proporcionar instrucciones para la indexación a los crawlers (robots o googlebots). Esto se logra con la etiqueta meta “robots”. Con los siguientes meta tags es posible estipular si una página será indexada y, en consecuencia, si estará disponible para la búsqueda. También se puede establecer si los robots han de seguir los enlaces salientes o si, por el contrario, han de ignorarlos. Esta información se cuenta entre los metadatos más relevantes para el SEO.
+    -->
+    <meta name='robots' content='index'/>    <!--Esta directriz permite al robot de búsqueda la indexación de una página de HTML, algo innecesario si se piensa que la indexación forma parte de su actividad habitual, así:-->
+    <meta name='robots' content='noindex'/>  <!--Se tiene que indicar expresamente si una página no debe ser incluida en el índice. Este tag prohíbe al buscador transferir contenidos de una página HTML a su base de datos:       -      El atributo “robots” se dirige a todos los buscadores, y “noindex” indica que no se permite la indexación. Si queremos impedirle el proceso solo a un buscador, podemos indicarlo con un atributo alternativo como, por ejemplo, “googlebot”.-->
+    <meta name='robots' content='follow'/>   <!--El comportamiento estándar de los motores de búsqueda consiste en recorrer los enlaces que encuentra en una página de HTML, a no ser que se les indique lo contrario. Esta información se puede incluir en las metaetiquetas, aunque no es necesario:-->
+    <meta name='robots' content='nofollow'/> <!--Si se quiere impedir que un robot de búsqueda alcance determinadas subpáginas de un sitio o rastree los enlaces en otro dominio se añade:-->
+
+    <meta name='robots' content='index,nofollow'/>
+    <meta name='robots' content='index,follow'/>
+    <meta name='robots' content='noindex,nofollow'/> <!-- PARA SISTEMAS -->
+
+    <!--Etiqueta “equiv” de HTTP-->
+        <!--Control de caché-->
+        <meta http-equiv='cache-control' content='no-cache'/><!--Para asegurar la fluidez del funcionamiento de Internet, las webs se suelen guardar en servidores proxy intermedios o en el caché del navegador para ser descargadas fácilmente en el futuro. Para impedirlo usamos el meta tag “cache-control” con el valor no-cache:     -     Las páginas web que cuentan con este meta tag se cargan nuevamente desde el servidor web cada vez que se accede a ellas. Esto puede ralentizar la navegación, pero puede ser conveniente en el caso de páginas que actualizan su contenido diariamente.-->
+        <!--Expires-->
+        <meta http-equiv='expires' content='tiempo de expiración en segundos'/><!--Es posible que no se quiera prohibir el almacenamiento temporal en caché de forma absoluta. En este caso se puede usar el atributo “http-equiv” para definir una fecha de expiración para los datos HTML solicitados. Se haría de esta manera:-->
+        <meta http-equiv='expires' content='0'/><!--Así es posible asignar a las páginas HTML la fecha de caducidad que se deseen. Una vez se supera esta fecha, el navegador tiene que cargar el documento HTML desde la página de origen. Pero si tiene que acudir siempre a la página original entonces se introduce un punto de caducidad de 0 segundos. En caso de que se quiera indicar un período de 12 horas, se introducen 43.200 segundos.-->
+        <meta http-equiv='expires' content='43200'/>
+        <meta http-equiv='expires' content='Sat, 07 Feb 2016 00:00:00 GMT'/><!--También es posible definir períodos de tiempo o fechas concretas, siempre en formato internacional y según el GMT (Greenwich Mean Time):-->
+        <!--Refresh-->
+        <meta http-equiv='refresh' content='10; url=http://www.ionos.es/'/><!--Con los meta tags “http-equiv” es posible configurar también una transferencia sencilla. De forma parecida a como funciona la etiqueta “expires”, con este atributo también se define una fecha de vencimiento, a partir de la cual los navegadores o los motores de búsqueda serán dirigidos a una URL establecida previamente. En este ejemplo, en 10 segundos se produce el reenvío a la página principal de IONOS:-->
+
+
+    <meta name='geo.placename' content='Bolivia'/>
+    <meta name='geo.position'  content='-16.290154,-63.588653'/>
+    <meta name='geo.region'    content='BO'/>
+    <meta property='place:location:latitude'  content='-16.290154'/>
+    <meta property='place:location:longitude' content='-63.588653'/>
+    <!-- The Open Graph protocol -->
+    <!-- https://ogp.me/ -->
+    <meta property='og:site_name'        content='Nombre Sitio Web'/>
+    <meta property='og:title'            content='Titulo de la publicación'/>
+    <meta property='og:description'      content='Descripción de la publicación'/>
+    <meta property='og:image'            content='URL_IMAGEN'/>
+    <meta property='og:image:secure_url' content='URL_ACORTADA'/>
+    <meta property='og:image:type'       content='jpg'/>
+    <meta property='og:image:width'      content='1200'/>
+    <meta property='og:image:height'     content='1200'/>
+    <meta property='og:url'              content='URL_ACORTADA'/>
+    <meta property='og:video'            content='URL_VIDEO'/>
+    <meta property='og:type'             content='video.movie'/><!--De que se trata el contenido  EJ: article,video.movie-->
+    <meta property='og:locale'           content='es_ES'/>
+    <meta property='og:locale:alternate' content='en_US'/>
+    <meta property='og:country_name'     content='Bolivia'/>
+    <meta property='og:image:alt'        content='Descripcion de la imagen'/>
+    <!-- Twitter -->
+    <meta name='twitter:card'        content=''/><!--Equivalente : og:type Ejemplo summary_large_image-->
+    <meta name='twitter:site'        content=''/><!--Equivalente : og:site_name  Ejemplo @recetaGratis-->
+    <meta name='twitter:title'       content=''/><!--Equivalente : og:title-->
+    <meta name='twitter:description' content=''/><!--Equivalente : og:description-->
+    <meta name='twitter:image'       content=''/><!--Equivalente : og:image-->
+    <meta name='twitter:url'         content=''/><!--Equivalente : og:url-->
+    <meta name='twitter:creator'     content='Creador de la publicación'/>
+
+    <link rel='stylesheet' type='text/css' href=''>
+</head>
+<body>
+    
+</body>
+</html>
