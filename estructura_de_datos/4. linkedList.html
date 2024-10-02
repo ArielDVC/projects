@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <div class='grid'>
+        <div class='padding'>
+            <form id='addByPositionF' autocomplete='off' class='card'>
+                <h2>Lista (Linked List)</h2>
+                <div>
+                    <label for='itemF'>Item:</label>
+                    <input type='text' id='itemF' autofocus required>
+                    <button type='button' id='addFirstF' class='success'>Agregar Inicio</button>
+                    <button type='button' id='addLastF' class='success'>Agregar Final</button>
+                </div>
+                <div>
+                    <label for='positionF'>Posición:</label>
+                    <input type='number' id='positionF' required>
+                    <button type='submit' class='success'>Agregar Posición</button>
+                    <button type='button' id='emptyF' class='info'>Limpiar</button>
+                </div>
+                <div class='margin-top'>
+                    <button type='button' id='deleteFirstF' class='danger'>Eliminar Inicio</button>
+                    <button type='button' id='deleteLastF' class='danger'>Eliminar Final</button>
+                </div>
+            </form>
+        </div>
+        <div class='padding'>
+            <div class='card'>
+                <h2>Información</h2>
+                <div id='itemsTextF'><strong>Items: </strong>-</div>
+                <div id='sizeF'><strong>Tamaño: </strong>0</div>
+                <div id='isEmptyF'><strong>Esta Vacio: </strong>Si</div>
+            </div>
+            <div class='card'>
+                <form id='deleteByPositionF' autocomplete='off'>
+                    <div>
+                        <label for='positionDF'>Posición:</label>
+                        <input type='number' id='positionDF' required>
+                        <button type='submit' class='danger'>Eliminar Posición</button>
+                    </div>
+                </form>
+                <form id='deleteByValueF' autocomplete='off'>
+                    <div>
+                        <label for='positionDVF'>Valor:</label>
+                        <input type='text' id='positionDVF' required>
+                        <button type='submit' class='danger'>Eliminar por Valor</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='padding'>
+            <ul class='data' id='itemsF'>
+            </ul>
+        </div>
+    </div>
+    <script src='4. linkedList.js'></script>
+    <script>
+        const items          = document.getElementById('itemsF'),
+            item             = document.getElementById('itemF'),
+            position         = document.getElementById('positionF'),
+            positionD        = document.getElementById('positionDF'),
+            positionDV       = document.getElementById('positionDVF'),
+            addFirst         = document.getElementById('addFirstF'),
+            addLast          = document.getElementById('addLastF'),
+            addByPosition    = document.getElementById('addByPositionF'),
+            empty            = document.getElementById('emptyF'),
+            deleteFirst      = document.getElementById('deleteFirstF'),
+            deleteLast       = document.getElementById('deleteLastF'),
+            deleteByPosition = document.getElementById('deleteByPositionF'),
+            deleteByValue    = document.getElementById('deleteByValueF'),
+            itemsText        = document.getElementById('itemsTextF'),
+            size             = document.getElementById('sizeF'),
+            isEmpty          = document.getElementById('isEmptyF');
+        const linkedList = new LinkedList();
+        addFirst.addEventListener('click',e=>{
+            item.value = (item.value).trim();
+            if(item.value != ''){
+                linkedList.addFirst(item.value);
+                const data = linkedList.show();
+                processLinkedList(data);
+                addByPosition.reset();
+                item.focus();
+            }
+        });
+        addLast.addEventListener('click',e=>{
+            item.value = (item.value).trim();
+            if(item.value != ''){
+                linkedList.addLast(item.value);
+                const data = linkedList.show();
+                processLinkedList(data);
+                addByPosition.reset();
+                item.focus();
+            }
+        });
+        addByPosition.addEventListener('submit',e=>{
+            e.preventDefault();
+            linkedList.addByPosition(item.value,position.value);
+            const data = linkedList.show();
+            processLinkedList(data);
+            e.target.reset();
+            item.focus();
+        });
+        deleteFirst.addEventListener('click',e=>{
+            linkedList.deleteFirst();
+            const data = linkedList.show();
+            processLinkedList(data);
+        });
+        deleteLast.addEventListener('click',e=>{
+            linkedList.deleteLast();
+            const data = linkedList.show();
+            processLinkedList(data);
+        });
+        deleteByPosition.addEventListener('submit',e=>{
+            e.preventDefault();
+            linkedList.deleteByPosition(positionD.value);
+            const data = linkedList.show();
+            processLinkedList(data);
+            e.target.reset();
+            positionD.focus();
+        });
+        deleteByValue.addEventListener('submit',e=>{
+            e.preventDefault();
+            linkedList.deleteByValue(positionDV.value);
+            const data = linkedList.show();
+            processLinkedList(data);
+            e.target.reset();
+            positionDV.focus();
+        });
+        empty.addEventListener('click',e=>{
+            linkedList.clear();
+            alert('Limpiado');
+            const data = linkedList.show();
+            processLinkedList(data);
+        });
+        function processLinkedList(data){
+            drawLinkedList([...data]);
+            drawLinkedListText(data);
+        }
+        function drawLinkedList(data){
+            // const response = data.reverse();
+            const response = data;
+            items.innerHTML = '';
+            response.forEach(val=>{
+                const draw = `<li>${val}</li>`;
+                items.insertAdjacentHTML('beforeend',draw);
+            });
+        }
+        function drawLinkedListText(data){
+            (itemsText.querySelector('strong').nextSibling).textContent = data.join(' - ');
+            (sizeF.querySelector('strong').nextSibling).textContent     = linkedList.size();
+            (isEmptyF.querySelector('strong').nextSibling).textContent  = linkedList.isEmpty() ? 'Si' : 'No';
+        }
+    </script>
+</body>
+</html>

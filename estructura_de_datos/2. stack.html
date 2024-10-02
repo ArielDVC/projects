@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <div class='grid'>
+        <div class='padding'>
+            <form id='pushF' autocomplete='off' class='card'>
+                <h2>Pila (Stack)</h2>
+                <div>
+                    <label for='itemF'>Item:</label>
+                    <input type='text' id='itemF' autofocus required>
+                </div>
+                <div>
+                    <button type='submit' class='success'>Agregar</button>
+                    <button type='button' id='popF' class='danger'>Eliminar</button>
+                    <button type='button' id='emptyF' class='info'>Limpiar</button>
+                </div>
+            </form>
+        </div>
+        <div class='padding'>
+            <div class='card'>
+                <h2>Información</h2>
+                <div id='itemsTextF'><strong>Items: </strong>-</div>
+                <div id='peekF'><strong>Ultimo: </strong>-</div>
+                <div id='sizeF'><strong>Tamaño: </strong>0</div>
+                <div id='isEmptyF'><strong>Esta Vacio: </strong>Si</div>
+            </div>
+        </div>
+        <div class='padding'>
+            <ul class='data' id='itemsF'>
+            </ul>
+        </div>
+    </div>
+    <script src='2. stack.js'></script>
+    <script>
+        const items   = document.getElementById('itemsF'),
+            item      = document.getElementById('itemF'),
+            push      = document.getElementById('pushF'),
+            pop       = document.getElementById('popF'),
+            empty     = document.getElementById('emptyF'),
+            itemsText = document.getElementById('itemsTextF'),
+            peek      = document.getElementById('peekF'),
+            size      = document.getElementById('sizeF'),
+            isEmpty   = document.getElementById('isEmptyF');
+        const stack = new Stack();
+        push.addEventListener('submit',e=>{
+            e.preventDefault();
+            stack.push(item.value);
+            const data = stack.getItems;
+            processStack(data);
+            e.target.reset();
+            item.focus();
+        });
+        pop.addEventListener('click',e=>{
+            const itemDel = stack.pop();
+            alert(`Eliminado : ${itemDel}`);
+            const data = stack.getItems;
+            processStack(data);
+        });
+        empty.addEventListener('click',e=>{
+            stack.empty();
+            alert('Limpiado');
+            const data = stack.getItems;
+            processStack(data);
+        });
+        function processStack(data){
+            drawStack([...data]);
+            drawStackText(data);
+        }
+        function drawStack(data){
+            const response = data.reverse();
+            items.innerHTML = '';
+            response.forEach(val=>{
+                const draw = `<li>${val}</li>`;
+                items.insertAdjacentHTML('beforeend',draw);
+            });
+        }
+        function drawStackText(data){
+            (itemsText.querySelector('strong').nextSibling).textContent = data.join(' - ');
+            (peek.querySelector('strong').nextSibling).textContent      = stack.peek();
+            (size.querySelector('strong').nextSibling).textContent      = stack.size();
+            (isEmpty.querySelector('strong').nextSibling).textContent   = stack.isEmpty() ? 'Si' : 'No';
+        }
+    </script>
+</body>
+</html>

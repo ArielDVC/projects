@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <div class='grid'>
+        <div class='padding'>
+            <form id='enqueueF' autocomplete='off' class='card'>
+                <h2>Cola (Queue)</h2>
+                <div>
+                    <label for='itemF'>Item:</label>
+                    <input type='text' id='itemF' autofocus required>
+                </div>
+                <div>
+                    <button type='submit' class='success'>Agregar</button>
+                    <button type='button' id='dequeueF' class='danger'>Eliminar</button>
+                    <button type='button' id='emptyF' class='info'>Limpiar</button>
+                </div>
+            </form>
+        </div>
+        <div class='padding'>
+            <div class='card'>
+                <h2>Información</h2>
+                <div id='itemsTextF'><strong>Items: </strong>-</div>
+                <div id='peekF'><strong>Primero: </strong>-</div>
+                <div id='sizeF'><strong>Tamaño: </strong>0</div>
+                <div id='isEmptyF'><strong>Esta Vacio: </strong>Si</div>
+            </div>
+        </div>
+        <div class='padding'>
+            <ul class='data' id='itemsF'>
+            </ul>
+        </div>
+    </div>
+    <script src="3. queue.js"></script>
+    <script>
+        const items   = document.getElementById('itemsF'),
+            item      = document.getElementById('itemF'),
+            enqueue   = document.getElementById('enqueueF'),
+            dequeue   = document.getElementById('dequeueF'),
+            empty     = document.getElementById('emptyF'),
+            itemsText = document.getElementById('itemsTextF'),
+            peek      = document.getElementById('peekF'),
+            size      = document.getElementById('sizeF'),
+            isEmpty   = document.getElementById('isEmptyF');
+        const queue = new Queue();
+        enqueue.addEventListener('submit',e=>{
+            e.preventDefault();
+            queue.enqueue(item.value);
+            const data = queue.getItems;
+            processQueue(data);
+            e.target.reset();
+            item.focus();
+        });
+        dequeue.addEventListener('click',e=>{
+            const itemDel = queue.dequeue();
+            alert(`Eliminado : ${itemDel}`);
+            const data = queue.getItems;
+            processQueue(data);
+        });
+        empty.addEventListener('click',e=>{
+            queue.empty();
+            alert('Limpiado');
+            const data = queue.getItems;
+            processQueue(data);
+        });
+        function processQueue(data){
+            drawQueue([...data]);
+            drawQueueText(data);
+        }
+        function drawQueue(data){
+            const response = data.reverse();
+            items.innerHTML = '';
+            response.forEach(val=>{
+                const draw = `<li>${val}</li>`;
+                items.insertAdjacentHTML('beforeend',draw);
+            });
+        }
+        function drawQueueText(data){
+            (itemsText.querySelector('strong').nextSibling).textContent = data.join(' - ');
+            (peekF.querySelector('strong').nextSibling).textContent     = queue.peek();
+            (sizeF.querySelector('strong').nextSibling).textContent     = queue.size();
+            (isEmptyF.querySelector('strong').nextSibling).textContent  = queue.isEmpty() ? 'Si' : 'No';
+        }
+    </script>
+</body>
+</html>
