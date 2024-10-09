@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    <script src='./0. recursividad.js'></script>
+    <script>
+        let salida = 0;
+        console.log('----- Sin Recursividad -----');
+        const sinRecursividad = new SinRecursividad();
+        salida = sinRecursividad.sumaPares(4);
+        console.log(salida);
+        salida = sinRecursividad.contarDigitos(12345);
+        console.log(salida);
+        salida = sinRecursividad.invertirCadena('Hola');
+        console.log(salida);
+        salida = sinRecursividad.factorial(4);
+        console.log(salida);
+        salida = sinRecursividad.potencia(2, 3);
+        console.log(salida);
+        salida = sinRecursividad.fibonacci(6);
+        console.log(salida);
+        salida = sinRecursividad.sumaDigitos(12345);
+        console.log(salida);
+        salida = sinRecursividad.contarOcurrencias([1,9,2,5,2,6,8,2,4],2);
+        console.log(salida);
+        salida = sinRecursividad.productoArreglo([1,2,3,4,5]);
+        console.log(salida);
+        console.log('----- Recursividad -----');
+        const recursividad = new Recursividad();
+        salida = recursividad.sumaPares(4);
+        console.log(salida);
+        salida = recursividad.contarDigitos(12345);
+        console.log(salida);
+        salida = recursividad.invertirCadena('Hola');
+        console.log(salida);
+        salida = recursividad.factorial(4);
+        console.log(salida);
+        salida = recursividad.potencia(2, 3);
+        console.log(salida);
+        salida = recursividad.fibonacci(6);
+        console.log(salida);
+        salida = recursividad.sumaDigitos(12345);
+        console.log(salida);
+        salida = recursividad.contarOcurrencias([1,9,2,5,2,6,8,2,4],2);
+        console.log(salida);
+        salida = recursividad.productoArreglo([1,2,3,4,5]);
+        console.log(salida);
+    </script>
+</body>
+</html>

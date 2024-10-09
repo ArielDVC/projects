@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    <script src='./0. recursividadPractico.js'></script>
+    <script>
+        let cantidad = 25;
+        console.log('---- SIN RECURSIVIDAD ----');
+        const stockProducto1 = [
+            new Lote('2025-01-01', 10),
+            new Lote('2025-02-01',  8),
+            new Lote('2025-03-01', 10),
+            new Lote('2025-04-01',  8)
+        ];
+        console.log('---- INICIO ----');
+        stockProducto1.forEach(data=>data.getDatos());
+        for(let i=0 ; i<stockProducto1.length ; i++){
+            let disponible = stockProducto1[i].getDisponible();
+            if(cantidad <= 0)
+                break;
+            if(disponible <= cantidad){
+                stockProducto1[i].setDisponible(0);
+                cantidad -= disponible;
+            }else{
+                stockProducto1[i].setDisponible(disponible-cantidad);
+                cantidad = 0;
+            }
+        }
+        console.log('---- FINAL ----');
+        stockProducto1.forEach(data=>data.getDatos());
+        console.log('---- CON RECURSIVIDAD ----');
+        cantidad = 25;
+        const stockProducto2 = [
+            new Lote('2025-01-01', 10),
+            new Lote('2025-02-01',  8),
+            new Lote('2025-03-01', 10),
+            new Lote('2025-04-01',  8)
+        ];
+        console.log('---- INICIO ----');
+        stockProducto2.forEach(data=>data.getDatos());
+        procesarLotes(stockProducto2, 0, cantidad);
+        console.log('---- FINAL ----');
+        stockProducto2.forEach(data=>data.getDatos());
+
+        function procesarLotes(stockProducto2, index, cantidad){
+            let disponible = stockProducto2[index].getDisponible();
+            if(cantidad <= 0)
+                return;
+            if(disponible <= cantidad){
+                stockProducto2[index].setDisponible(0);
+                cantidad -= disponible;
+            }else{
+                stockProducto2[index].setDisponible(disponible-cantidad);
+                cantidad = 0;
+            }
+            return procesarLotes(stockProducto2, ++index, cantidad);
+        }
+    </script>
+</body>
+</html>
