@@ -1,0 +1,123 @@
+http://localhost/Ariel/wordpress/wp-login.php
+root
+AnitaLavaLaTina888!
+correo@dominio.com
+
+
+seo
+07)NQi4&onxLyg)pu$gP*hc3
+correo@dominio.com
+
+
+
+.htaccess
+    RewriteRule . /Ariel/wordpress/index.php [L]
+wp-config.php
+
+BASE DE DATOS
+    wp_options
+        2 y 3
+
+
+https://es.wordpress.org/
+
+https://es.wordpress.org/plugins/
+    WooCommerce
+    Yoast SEO
+https://es.wordpress.org/themes/
+    BlogHash
+
+
+http://localhost/Ariel/wordpress/wp-admin/
+    Apariencia
+    Plugins
+        Añadir nuevo plugin
+            Subir plugin
+                PLUGIN.ZIP
+                    Instalar ahora
+                    ...
+                    Activar Plugin
+
+Escritorio
+Esto mostrará la página principal de su escritorio. En la parte superior izquierda de su escritorio verá algunas estadísticas breves sobre el número de entradas, páginas y comentarios. Si tiene activado el plugin Akismet, también verá el número de comentarios spam o comentarios a la espera de aprobación.
+Entradas
+Aquí es donde puede crear una nueva entrada de blog. También puede actualizar sus categorías y etiquetas de entradas.
+Medios
+Aquí es donde se almacenan imágenes, documentos o archivos subidos. Puede navegar por la biblioteca de medios, así como editar y actualizar archivos.
+Páginas
+Aquí es donde se crean y mantienen todas las páginas.
+Comentarios
+Dentro de esta sección puede administrar todos los comentarios, incluyendo las respuestas y los comentarios marcados como spam.
+Apariencia
+Desde este menú se controla el aspecto visual del sitio. Puede elegir un nuevo tema, administrar los widgets o menús del sitio, y hasta editar los archivos del tema.
+Plugins
+Los plugins complementan y amplían la funcionalidad de WordPress. Puede agregar o eliminar plugins desde aquí, así como activar o desactivarlos.
+Usuarios
+Esta pantalla lista todos los usuarios existentes de su sitio. Dependiendo de su perfil, puede también agregar nuevos usuarios y administrar sus perfiles.
+Herramientas
+Esta sección le da acceso a varias y prácticas herramientas, tales como opciones para importar y exportar datos desde y hacia su sitio WordPress. También puede ejecutar una comprobación de la salud del sitio, la cual muestra información crucial sobre la configuración de WordPress y cualquier otro elemento que requiera de su atención.
+Ajustes
+Aquí es donde se configura su sitio. Entre otras cosas, le permite configurar el título de su sitio y la URL; en dónde aparecerán sus entradas, si los visitantes pueden publicar comentarios o no, y otras tantas opciones. En la mayoría de los casos, una vez que el sitio está configurado, no hay necesidad de cambiar ninguna de las opciones de esta sección.
+En la parte inferior del menú verá un enlace llamado Cerrar menú. Con un clic se oculta el menú y tan solo se muestran los iconos en su lugar. Con un clic en el icono de la flecha se expande el menú nuevamente.
+Ocasionalmente, cuando instale un plugin, estos tendrán sus propias páginas de ajustes o configuraciones. La ubicación de estos enlaces dependerá enteramente del plugin, pero en la mayoría de los casos estas páginas aparecerán dentro de la sección Herramientas, la sección Ajustes o en un menú nuevo situado en alguna parte del menú principal.
+
+Yoast SEO
+Es un plugin diseñado para optimizar sitios web en motores de búsqueda. Ayuda a mejorar la visibilidad del contenido mediante análisis de SEO y legibilidad, sugerencias para optimizar palabras clave, títulos y meta descripciones, y la creación automática de sitemaps XML. Además, permite gestionar metaetiquetas y controlar cómo aparece el contenido en los resultados de búsqueda, facilitando la indexación y mejorando el posicionamiento en Google.
+WooCommerce
+Es un plugin que convierte un sitio en una tienda en línea completa, permitiendo a los usuarios vender productos y servicios. Ofrece funcionalidades como la gestión de inventario, opciones de pago y envío, integración con diversas pasarelas de pago, y la capacidad de personalizar la tienda según las necesidades del negocio. Es flexible y escalable, lo que lo hace adecuado tanto para pequeñas tiendas como para grandes negocios.
+
+
+
+
+EJEMPLO ENTRADA
+Titulo
+Cómo optimizar un sitio web para mejorar su posicionamiento en buscadores
+
+Contenido
+¿Sabías que un sitio web optimizado no solo mejora su visibilidad en los motores de búsqueda, sino que también ofrece una mejor experiencia a los usuarios? En este artículo, te compartiremos algunos pasos esenciales para optimizar tu sitio y aumentar su rendimiento.
+Subtítulo 1: 1. Investigación de palabras clave
+La optimización comienza con una adecuada investigación de palabras clave. Estas deben estar alineadas con lo que tu audiencia busca. Usa herramientas como Google Keyword Planner para encontrar las palabras más relevantes para tu nicho.
+Subtítulo 2: 2. Optimización del contenido
+Incluir las palabras clave de forma natural en los títulos, subtítulos y en el cuerpo del contenido es crucial. Además, asegúrate de que el contenido sea valioso y fácil de leer, utilizando párrafos cortos y listas cuando sea necesario.
+Subtítulo 3: 3. Mejora la velocidad de tu sitio web
+Un sitio lento no solo frustra a los usuarios, sino que también afecta negativamente tu SEO. Usa herramientas como Google PageSpeed Insights para medir y mejorar la velocidad de tu sitio.
+Subtítulo 4: 4. Optimización de imágenes
+Utiliza imágenes de alta calidad, pero asegúrate de comprimirlas para que no ralenticen tu sitio. Además, no olvides agregar texto alternativo (alt text) con palabras clave relevantes.
+Conclusión:
+Optimizar un sitio web requiere un enfoque holístico que incluya la investigación de palabras clave, la mejora del contenido y la atención a los aspectos técnicos. Implementando estos consejos, tu sitio web estará mejor preparado para competir en los resultados de búsqueda.
+
+Frase clave objetivo
+Cómo optimizar un sitio web
+Slug
+como-optimizar-un-sitio-web-para-mejorar-su-posicionamiento-en-buscadores
+Meta description
+Aprende a optimizar un sitio web para mejorar su posicionamiento en los buscadores con estas estrategias clave de SEO, desde el uso de palabras clave hasta la velocidad de carga.
+Descubre cómo optimizar un sitio web y mejorar su posicionamiento con estrategias SEO, desde palabras clave hasta velocidad de carga.
+Titulo SEO
+Guía para optimizar tu sitio web y mejorar el SEO
+Etiquetas
+    Optimización web
+    SEO para principiantes
+    Mejorar posicionamiento
+    Palabras clave SEO
+    Velocidad del sitio web
+    Optimización de contenido
+    Técnicas SEO
+    SEO on-page
+    Ranking en Google
+    Optimización de imágenes
+
+URLS: https://ads.google.com/intl/es-419/home/
+
+Título de las migas de pan
+Cómo optimizar un sitio web para mejorar su SEO
+
+
+
+
+
+
+Yoast SEO
+    General
+        Básicos del sitio
+            Descripción corta: 
